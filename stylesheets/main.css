@@ -160,6 +160,20 @@ article {
     #form-section a:hover {
       opacity: .7; }
 
+#current-users {
+  width: 60%;
+  color: white;
+  margin: 10.66667rem auto;
+  padding: 1.22222rem 0;
+  border-top: 1px solid white; }
+  #current-users h3, #current-users h4 {
+    text-align: center; }
+  #current-users h4 {
+    font-size: 2rem; }
+  #current-users h3 {
+    font-size: 4rem;
+    margin-top: 0.66667rem; }
+
 #info-section {
   color: #cfcfcf;
   margin: 4.55556rem; }

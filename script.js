@@ -31,3 +31,30 @@ function closeForm(){
   $("#call-num").css("opacity","1");
   $("#reg").css("opacity","1");
 }
+
+(function manageTotalPlans() {
+
+  let totalplans = String(getRandom(100000, 200000));
+  totalplans = addComma(totalplans);
+
+  addToTotalPlans(totalplans);
+
+  function addToTotalPlans(currentValue){
+    let num = Number(currentValue.replace(",", ""));
+    num++;
+    num = String(num);
+    num = addComma(num);
+    $("#total-plans").html(num);
+    setTimeout(function() {
+      addToTotalPlans(num);
+    }, getRandom(100, 2000));
+  }
+  function getRandom(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
+
+  }
+  function addComma(num){
+    return num.slice(0, 3) + ","+ num.slice(3, 6);
+  }
+
+})();
